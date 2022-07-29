@@ -1,9 +1,7 @@
 import React from "react";
-import Inventory from "./views/inventory";
-import { useState } from "react";
 
-export default function carsList() {
-  const carsList = [
+export default function Cars() {
+  const cars = [
     {
       id: 1,
       make: "Toyota",
@@ -20,6 +18,16 @@ export default function carsList() {
       model: "F150",
     },
   ];
-  const carList = carsList.map((car) => <Inventory car={car} />);
-  return <div>{carList}</div>;
+
+  const element = (
+    <div>
+      {cars.map((car) => (
+        <div>
+          <h2>{car.make}</h2>
+          <p>{car.model}</p>
+        </div>
+      ))}
+    </div>
+  );
+  return element;
 }
