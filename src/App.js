@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./views/home";
 import Inventory from "./views/inventory";
 import Profile from "./views/profile";
+import CarSingle from "./views/CarSingle";
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
@@ -24,7 +25,10 @@ export default function App() {
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/inventory" element={<Inventory />} />
+          <Route path="inventory" element={<Inventory />}>
+            <Route path=":id" element={<CarSingle />} />
+            <Route path="" element={<Inventory />} />
+          </Route>
           <Route path="/profile" element={<Profile />} />
         </Routes>
       </Router>

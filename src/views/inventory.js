@@ -1,10 +1,10 @@
-import React from "react";
-import Cars from "../components/cars";
+import CarSingle from "./CarSingle";
+import CarList from "../components/CarList";
 export default function Inventory() {
   return (
-    <div>
-      <h1>Inventory</h1>
-      {Cars()}
+    <div className="card">
+      {CarSingle()}
+      {CarList()}
     </div>
   );
 }
