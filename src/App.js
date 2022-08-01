@@ -3,6 +3,7 @@ import Home from "./views/home";
 import Inventory from "./views/inventory";
 import Profile from "./views/profile";
 import CarSingle from "./views/CarSingle";
+import firebase from "./firebase";
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 

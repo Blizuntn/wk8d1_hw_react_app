@@ -1,10 +1,7 @@
-import CarSingle from "./CarSingle";
-import CarList from "../components/CarList";
-export default function Inventory() {
+export default function Inventory(props) {
   return (
     <div className="card">
-      {CarSingle()}
-      {CarList()}
+      <h2>Inventory</h2>
     </div>
   );
 }
